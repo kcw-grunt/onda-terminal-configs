@@ -1,0 +1,19 @@
+# /etc/ax25/axports
+#
+# The format of this file is:
+#
+# name callsign speed paclen window description
+#
+#        UPDATED: June 2, 2018 
+##############################################################################
+ondadig1      KM6TIG-1       9600    255     7       146.580 MHz (digital 1 9600  bps)
+ondadup1      KM6TIG-2       9600    255     7       435.00/433.60 MHz (duplex 1 9600 bps)
+ondas1        KM6TIG-3       9600    255     7       146.750 MHz (simplex 1 9600  bps)
+ondas2        KM6TIG-4       9600    255     7       147.435 MHz (simplex 2 9600  bps)
+ondadup2      KM6TIG-5       9600    255     7       435.00/431.80 MHz (duplex 2 9600 bps)
+ondadup3      KM6TIG-6       9600    255     7       431.80/433.60 MHz (duplex 3 9600 bps)
+
+
+
+#SAMPLE 1       OH2BNS-1        1200    255     2       144.675 MHz (1200  bps)
+#SAMPLE 2       OH2BNS-9        38400   255     7       TNOS/Linux  (38400 bps)
