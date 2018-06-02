@@ -1,6 +1,13 @@
 #!/bin/bash
-# this script is meant to be run when all terminals need updating. Some things that are updated accordingly:
-# - This script
-# - AX25 Config
-# - IP Static Routing
-# - Update Project Onda React App (calling git repo)
+#################UPDATE ONDA TERMINALS##########################################################################
+# this script is meant to be run when all terminals need updating. Some things that are updated accordingly:   #
+# - This script                                                                                                #
+# - AX25 Config                                                                                                #
+# - IP Static Routing                                                                                          #
+# - Update Project Onda React App (calling git repo)                                                           #
+################################################################################################################
+
+
+####################----Update AX25----##############
+
+mv ax25d.conf /etc/ax25/ax25d.conf
