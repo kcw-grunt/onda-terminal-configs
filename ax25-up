@@ -5,6 +5,9 @@
 termip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | cut -d'.' -f 4)
 axip="172.16.2.$termip"
 
+#set which ax port
+axport="ondadig1"
+
 #Set Sysctl values
 sysctl -w kernel.panic=30
 sysctl -w kernel.panic_on_oops=30 
@@ -14,7 +17,7 @@ sysctl -w kernel.panic_on_oops=30
 /sbin/modprobe mkiss
 
 # Attach KISS-device /dev/ttyUSB0 to Port ondas1
-  /usr/sbin/kissattach /dev/ttyUSB0 ondas1 $axip >/tmp/ax25-config.tmp
+  /usr/sbin/kissattach /dev/ttyUSB0 $axport $axip >/tmp/ax25-config.tmp
   awk '/device/ { print $7 }' /tmp/ax25-config.tmp > /tmp/ax25-config-tmp
   read Device > /tmp/ax25-config-tmp 
 
@@ -25,7 +28,7 @@ sysctl -w kernel.panic_on_oops=30
 # slottime         (-s) =  20  (1200 baud) 30 (9600)
 # txdelay          (-t) =  300 (1200 baud) 400 (9600)
 #  txtail          (-l) = 20 milliseconds
-#Doesnt work /usr/sbin/kissparms -p ondas1 -f n -r 160 -s 20 -l 20 -t 250 -l 20
+#Doesnt work /usr/sbin/kissparms -p $axport -f n -r 160 -s 20 -l 20 -t 250 -l 20
 /usr/sbin/kissparms -p ondas1 -t 500 -s 200 -r 32 -l 100 -f n
 #/usr/sbin/kissparms -p ondas1 -r 228 -s 10 -l 20 -t 250 
 
