@@ -16,8 +16,10 @@ sysctl -w kernel.panic_on_oops=30
 /sbin/modprobe ax25
 /sbin/modprobe mkiss
 
-# Attach KISS-device /dev/ttyUSB0 to Port ondas1
-  /usr/sbin/kissattach /dev/ttyUSB0 $axport $axip >/tmp/ax25-config.tmp
+
+##################TEMP
+# Attach KISS-device /dev/ttyUSB0 to Port
+  /usr/sbin/kissattach /dev/ttyUSB0  172.16.2.45 ondadig1 > /tmp/ax25-config.tmp
   awk '/device/ { print $7 }' /tmp/ax25-config.tmp > /tmp/ax25-config-tmp
   read Device > /tmp/ax25-config-tmp 
 
