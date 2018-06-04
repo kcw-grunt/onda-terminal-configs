@@ -10,5 +10,6 @@
 
 ####################----Update AX25----##############
 
-mv ax25d.conf /etc/ax25/ax25d.conf
-mv axports /etc/ax25/axports
+sudo mv ax25d.conf /etc/ax25/ax25d.conf
+sudo mv axports /etc/ax25/axports
+sudo mv ax25-up /etc/ax25/ax25-up
