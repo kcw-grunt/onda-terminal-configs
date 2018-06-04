@@ -23,16 +23,18 @@ sysctl -w kernel.panic_on_oops=30
   awk '/device/ { print $7 }' /tmp/ax25-config.tmp > /tmp/ax25-config-tmp
   read Device > /tmp/ax25-config-tmp 
 
-# Install Parameters: 
+# Install Parameters: #############################
 # port             (-p) = ondas1
 # full/half duplex (-f) = n
 # persist          (-r) = 160 (1200 baud) 224 (9600)
 # slottime         (-s) =  20  (1200 baud) 30 (9600)
 # txdelay          (-t) =  300 (1200 baud) 400 (9600)
 #  txtail          (-l) = 20 milliseconds
-#Doesnt work /usr/sbin/kissparms -p $axport -f n -r 160 -s 20 -l 20 -t 250 -l 20
-/usr/sbin/kissparms -p ondas1 -t 500 -s 200 -r 32 -l 100 -f n
-#/usr/sbin/kissparms -p ondas1 -r 228 -s 10 -l 20 -t 250 
+####################################################
+
+
+/usr/sbin/kissparms -p ondadig1 -t 400 -s 20 -r 200 -20 -f y
+
 
 # Start ax25d daemon
   /usr/sbin/ax25d &
