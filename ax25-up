@@ -6,7 +6,7 @@ termip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | c
 axip="172.16.2.$termip"
 
 #Set Sysctl values
-sctl -w kernel.panic=30
+sysctl -w kernel.panic=30
 sysctl -w kernel.panic_on_oops=30 
 
 # Run modprobes
