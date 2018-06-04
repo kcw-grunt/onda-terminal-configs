@@ -19,7 +19,7 @@ sysctl -w kernel.panic_on_oops=30
 
 ##################TEMP
 # Attach KISS-device /dev/ttyUSB0 to Port
-  /usr/sbin/kissattach /dev/ttyUSB0  172.16.2.45 ondadig1 > /tmp/ax25-config.tmp
+  /usr/sbin/kissattach /dev/ttyUSB0  ondadig1 172.16.2.45 > /tmp/ax25-config.tmp
   awk '/device/ { print $7 }' /tmp/ax25-config.tmp > /tmp/ax25-config-tmp
   read Device > /tmp/ax25-config-tmp 
 
