@@ -12,4 +12,4 @@
 
 sudo cp ax25d.conf /etc/ax25/ax25d.conf
 sudo cp axports /etc/ax25/axports
-#sudo cp ax25-up /etc/ax25/ax25-up
+sudo cp ax25-up /etc/ax25/ax25-up
