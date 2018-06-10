@@ -3,7 +3,7 @@
 
 # Grab ip address of wireless to set ax port
 termip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | cut -d'.' -f 4)
-axip="172.16.2.$termip"
+axip="172.1.1.$termip"
 
 #set which ax port
 axpt="ondadig1"
