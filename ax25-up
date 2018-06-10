@@ -6,7 +6,7 @@ termip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | c
 axip="172.1.1.$termip"
 
 #set which ax port
-axpt="ondadig1"
+axpt="ondadig$termip"
 
 #Set Sysctl values
 sysctl -w kernel.panic=30
