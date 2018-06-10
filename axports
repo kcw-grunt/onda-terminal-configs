@@ -8,14 +8,14 @@
 ##############################################################################
 
 # Grab ip address of wireless to set ax port
-termip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | cut -d'.' -f 4)
-axip="172.1.1.$termip"
+tip=$(/sbin/ifconfig wlan0 | grep 'inet' | cut -d: -f2 | awk '{print $2}' | cut -d'.' -f 4)
+ax="172.1.1.$tip"
 
 #set which ax port
-axpt="ondadig$termip"
+axp="ondadig$tip"
 
 
-"$axpt"      "KM6TIG-$termip" 9600    255     7       146.580 MHz (digital 1 9600  bps)
+"$axp"      "KM6TIG-$tip" 9600    255     7       146.580 MHz (digital 1 9600  bps)
 ondadup1      KM6TIG-2       9600    255     7       435.00/433.60 MHz (duplex 1 9600 bps)
 ondas1        KM6TIG-3       9600    255     7       146.750 MHz (simplex 1 9600  bps)
 ondas2        KM6TIG-4       9600    255     7       147.435 MHz (simplex 2 9600  bps)
